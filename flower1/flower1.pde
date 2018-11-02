@@ -2,7 +2,7 @@
 
 float speed = 3;
 
-boolean isColor = false;
+boolean isColor = true;
 
 //luxurious
 /*float k = 2;
@@ -16,7 +16,7 @@ float colorDelta = 0.05 * speed;
 float k = 1.95;
 float kDelta = -0.00005 * speed;
 float ampDelta = -0.02 * speed;
-float colorDelta = 0.004 * speed;
+float colorDelta = 0.04 * speed;
 
 
 float c = 0;
