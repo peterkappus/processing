@@ -1,14 +1,26 @@
 
-float k = 2;
-float c = 0;
-float rotation = 0;
+
 float speed = 5;
 
+
+//luxurious
+float k = 2;
 float kDelta = 0.00001 * speed;
-float amp;
 float ampDelta = 0.05 * speed;
-//colour delta
 float colourDelta = 0.05 * speed;
+
+//spikey
+float k = 1;
+float kDelta = 0.0001 * speed;
+float ampDelta = 0.02 * speed;
+float colourDelta = 0.04 * speed;
+
+
+float c = 0;
+float rotation = 0;
+
+float amp;
+//colour delta
 float rotationDelta = 0.0001 * speed;
 int howMany = 40;
 float thickness = 0.001;
@@ -49,6 +61,8 @@ void draw() {
   
   endShape();
   
+  print(k);
+  print("\n");
   //incr *= 1.001;
   k += kDelta;
   //amp *= 0.9999;
