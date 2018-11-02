@@ -4,10 +4,12 @@ float speed = 5;
 
 
 //luxurious
-float k = 2;
+/*float k = 2;
 float kDelta = 0.00001 * speed;
 float ampDelta = 0.05 * speed;
 float colourDelta = 0.05 * speed;
+*/
+
 
 //spikey
 float k = 1;
