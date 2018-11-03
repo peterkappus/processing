@@ -34,7 +34,7 @@ void setup() {  // setup() runs once
   //fullScreen();
   frameRate(30);
   background(0);
-  //smooth(4);
+  smooth(4);
   if(isColor) {
     colorMode(HSB);
   }
@@ -73,11 +73,14 @@ void draw() {
   
   endShape();
   
-  print(k);
-  print("\n");
+  //print(k);
+  //print("\n");
   //incr *= 1.001;
   k += kDelta;
   //amp *= 0.9999;
   //howMany++;
   //thickness *= 1.01;
+  
+  saveFrame("output/flower_#####.png");
+  println(frameRate);
 }
