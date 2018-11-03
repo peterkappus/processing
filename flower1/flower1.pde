@@ -1,6 +1,6 @@
 
 
-float speed = 3;
+float speed = 10;
 
 boolean isColor = true;
 
@@ -28,8 +28,14 @@ float rotationDelta = 0.00001 * speed;
 int howMany = 70;
 float thickness = 0.001;
 
+
+
 void setup() {  // setup() runs once
-  amp = width * 0.4;
+  //stay put!
+ampDelta = 0;
+rotationDelta = 0;
+
+amp = width * 0.49;
   size(800,800);
   //fullScreen();
   frameRate(30);
@@ -53,6 +59,9 @@ void draw() {
   if(isColor){
     stroke(c % 255,255,255);
   }
+  
+  
+  
   noFill();
   //clear();
   translate(width/2, height/2);
@@ -81,6 +90,12 @@ void draw() {
   //howMany++;
   //thickness *= 1.01;
   
-  saveFrame("output/flower_#####.png");
+  //saveFrame("output/flower_#####.png");
   println(frameRate);
+  
+  //slowly fade out... draw a slighly opaque square over the image each iteration
+  translate(-width/2,-height/2);
+  noStroke();
+  fill(0,0,0,5);
+  rect(0,0,width,height);
 }
